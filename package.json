@@ -3,6 +3,8 @@
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "babel-register": "^6.26.0",
+    "delay": "^2.0.0",
+    "dotenv": "^5.0.1",
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {
