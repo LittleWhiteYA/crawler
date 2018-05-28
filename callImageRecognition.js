@@ -1,17 +1,19 @@
 const fs = require('fs');
 const rest = require('restler');
 
+const { API_USERNAME, API_PASSWORD, TYPEID, SOFTID, SOFTKEY } = process.env;
+
 module.exports = function callImageRecognition(url, filename) {
   return new Promise(resolve => {
     rest
       .post(url, {
         multipart: true,
         data: {
-          username: 'ow65544978',
-          password: 'qaz123456',
-          typeid: '1040',
-          softid: '104944',
-          softkey: 'dd8fe811b5df4459970137691cd525ae',
+          username: API_USERNAME,
+          password: API_PASSWORD,
+          typeid: TYPEID,
+          softid: SOFTID,
+          softkey: SOFTKEY,
           image: rest.file(
             filename,
             null,
